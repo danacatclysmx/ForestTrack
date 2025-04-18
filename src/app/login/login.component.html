@@ -1,0 +1,105 @@
+<div #container class="container" id="container">
+  <!-- Formulario de Registro -->
+  <div class="form-container sign-up-container">
+    <form>
+      <h1>Crea una cuenta</h1>
+      <div class="social-container">
+        <a href="https://www.facebook.com/" class="social" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://workspace.google.com/intl/es-419/gmail/"
+          class="social"
+          target="_blank"
+          ><i class="fab fa-google-plus-g"></i
+        ></a>
+        <a href="https://co.linkedin.com/" class="social" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <span>O usa tu correo para registrarte.</span>
+      <div class="infield">
+        <input
+          type="text"
+          placeholder="Nombre"
+          [(ngModel)]="nombre"
+          name="nombre"
+        />
+      </div>
+      <div class="infield">
+        <input
+          type="email"
+          placeholder="Correo"
+          [(ngModel)]="correo"
+          name="correo"
+        />
+      </div>
+      <div class="infield">
+        <input
+          type="password"
+          placeholder="Contraseña"
+          [(ngModel)]="contrasena"
+          name="contrasena"
+        />
+      </div>
+      <button class="styles_button" (click)="onRegister()">Registrarse</button>
+    </form>
+  </div>
+
+  <!-- Formulario de Inicio de Sesión -->
+  <div class="form-container sign-in-container">
+    <form>
+      <h1>Iniciar sesión</h1>
+      <div class="social-container">
+        <a href="https://www.facebook.com/" class="social" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://workspace.google.com/intl/es-419/gmail/"
+          class="social"
+          target="_blank"
+          ><i class="fab fa-google-plus-g"></i
+        ></a>
+        <a href="https://co.linkedin.com/" class="social" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <span>o accede con tu cuenta</span>
+      <div class="infield">
+        <input
+          type="email"
+          placeholder="Correo"
+          [(ngModel)]="correoLogin"
+          name="correoLogin"
+        />
+      </div>
+      <div class="infield">
+        <input
+          type="password"
+          placeholder="Contraseña"
+          [(ngModel)]="contrasenaLogin"
+          name="contrasenaLogin"
+        />
+      </div>
+      <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+      <button class="styles_button" (click)="onLogin()">Acceder</button>
+    </form>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay-container" id="overlayCon">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Hola otra vez!</h1>
+        <p><strong>Accede a tu cuenta</strong> y sigue donde lo dejaste.</p>
+        <button (click)="togglePanels()">Acceder</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>¡Da el paso!</h1>
+        <p>Toma el control de tus notas, <strong>Registrate ahora!</strong></p>
+        <button (click)="togglePanels()">Registrarse</button>
+      </div>
+    </div>
+    <button #overlayBtn id="overlayBtn"></button>
+  </div>
+</div>
